@@ -1,0 +1,17 @@
+<div class="alert alert-success">
+  <p [hidden]="isHidden">
+    {{ name }}
+  </p>
+  <button (click)="showHide()" class="btn btn-danger">{{ btnMessage }}</button>
+  <app-second></app-second>
+</div>
+
+<!--
+  J'ai quoi dans mon html
+
+  balises
+    -> attributs (état)
+
+  events
+    -> comportement
+ -->
