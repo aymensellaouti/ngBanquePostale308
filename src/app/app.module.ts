@@ -10,6 +10,8 @@ import { ColorComponent } from "./component/color/color.component";
 import { TwoComponent } from "./component/two/two.component";
 import { FormsModule } from "@angular/forms";
 import { RotatingCardComponent } from './component/rotating-card/rotating-card.component';
+import { PereComponent } from './component/pere/pere.component';
+import { FilsComponent } from './component/fils/fils.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { RotatingCardComponent } from './component/rotating-card/rotating-card.c
     ColorComponent,
     TwoComponent,
     RotatingCardComponent,
+    PereComponent,
+    FilsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
