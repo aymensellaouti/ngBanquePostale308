@@ -9,6 +9,7 @@ export class FirstComponent {
   name = "je suis first";
   isHidden = false;
   btnMessage = "hide";
+  message = "";
   constructor() {
     /*     setInterval(() => {
       this.isHidden = !this.isHidden; '1' == 1
@@ -17,6 +18,9 @@ export class FirstComponent {
   showHide() {
     this.isHidden = !this.isHidden;
     this.btnMessage = this.btnMessage === "show" ? "hide" : "show";
+  }
+  changeMessage(newMessage: string) {
+    this.message = newMessage;
   }
 }
 

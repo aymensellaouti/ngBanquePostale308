@@ -5,7 +5,9 @@
   <button (click)="showHide()" class="btn btn-danger">{{ btnMessage }}</button>
   <app-second></app-second>
 </div>
+<input type="text" #monInput (change)="changeMessage(monInput.value)" />
 
+{{ message }}
 <!--
   J'ai quoi dans mon html
 
