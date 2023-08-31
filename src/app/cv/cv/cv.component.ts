@@ -7,6 +7,7 @@ import { Cv } from "../model/cv.model";
   styleUrls: ["./cv.component.css"],
 })
 export class CvComponent {
+  date: Date = new Date();
   cvs: Cv[] = [
     new Cv(
       1,
@@ -17,21 +18,13 @@ export class CvComponent {
       "1234",
       20
     ),
-    new Cv(
-      2,
-      "Sellaouti",
-      "Aymen",
-      "Formateur",
-      "rotating_card_profile2.png",
-      "5678",
-      41
-    ),
+    new Cv(2, "Sellaouti", "Aymen", "Formateur", "", "5678", 41),
     new Cv(
       3,
       "Sellaouti",
       "Skander",
       "Formateur",
-      "rotating_card_profile2.png",
+      "                   ",
       "5678",
       4
     ),
