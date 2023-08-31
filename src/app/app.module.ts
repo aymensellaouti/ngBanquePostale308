@@ -30,6 +30,8 @@ import { DefaultImagePipe } from "./cv/pipe/default-image.pipe";
 import { TodoComponent } from "./todo/todo/todo.component";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { NF404Component } from './component/nf404/nf404.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     TodoComponent,
     EmbaucheComponent,
     NavbarComponent,
+    NF404Component,
+    DetailCvComponent,
   ],
   imports: [
     BrowserModule,
