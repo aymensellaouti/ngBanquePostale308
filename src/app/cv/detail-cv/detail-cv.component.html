@@ -1,4 +1,4 @@
-<!-- <div class="d-flex justify-content-center" *ngIf="cv">
+<div class="d-flex justify-content-center" *ngIf="cv">
   <div class="col-lg-8 push-lg-4">
     <div class="tab-content p-b-3">
       <div class="tab-pane active" id="profile">
@@ -38,11 +38,14 @@
               </tbody>
             </table>
             <div class="d-flex justify-content-center">
-              <button
-                (click)="deleteCv(cv)"
-                class="btn btn-danger"
-              >
+              <button (click)="deleteCv()" class="btn btn-danger">
                 Delete
+              </button>
+              <button [routerLink]="['/cv/1']" class="btn btn-danger">
+                Cv1
+              </button>
+              <button [routerLink]="['/cv/3']" class="btn btn-danger">
+                Cv3
               </button>
             </div>
           </div>
@@ -51,4 +54,3 @@
     </div>
   </div>
 </div>
- -->
