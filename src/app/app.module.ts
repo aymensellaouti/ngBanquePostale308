@@ -29,6 +29,7 @@ import { BtcToUsdPipe } from "./pipe/btc-to-usd.pipe";
 import { DefaultImagePipe } from "./cv/pipe/default-image.pipe";
 import { TodoComponent } from "./todo/todo/todo.component";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { EmbaucheComponent } from "./cv/embauche/embauche.component";
     DefaultImagePipe,
     TodoComponent,
     EmbaucheComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
