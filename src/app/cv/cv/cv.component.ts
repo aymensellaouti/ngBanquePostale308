@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Cv } from "../model/cv.model";
 import { LoggerService } from "../../services/logger.service";
 import { SayHelloService } from "../../services/say-hello.service";
+import { TodoService } from "../../todo/service/todo.service";
 
 @Component({
   selector: "app-cv",
@@ -34,12 +35,14 @@ export class CvComponent {
   selectedCv: Cv | null = null;
   constructor(
     private loggerService: LoggerService,
-    private sayHelloService: SayHelloService
+    private sayHelloService: SayHelloService,
+    private todoService: TodoService
   ) {
     this.sayHelloService.sayCc();
     this.loggerService.logger("cc je suis le cvComponent");
   }
   getSelectedCv(cv: Cv) {
     this.selectedCv = cv;
+    this.todoService.logTodo();
   }
 }
