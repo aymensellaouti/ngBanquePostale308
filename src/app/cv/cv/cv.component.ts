@@ -26,6 +26,15 @@ export class CvComponent {
       "5678",
       41
     ),
+    new Cv(
+      3,
+      "Sellaouti",
+      "Skander",
+      "Formateur",
+      "rotating_card_profile2.png",
+      "5678",
+      4
+    ),
   ];
   selectedCv: Cv | null = null;
   getSelectedCv(cv: Cv) {
