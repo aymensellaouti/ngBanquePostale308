@@ -20,6 +20,7 @@ import { NgstyleComponent } from './directive/ngstyle/ngstyle.component';
 import { MiniWordComponent } from './directive/mini-word/mini-word.component';
 import { NgClassComponent } from './directive/ng-class/ng-class.component';
 import { HighlightDirective } from './directive/highlight.directive';
+import { RainbowDirective } from './directive/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HighlightDirective } from './directive/highlight.directive';
     MiniWordComponent,
     NgClassComponent,
     HighlightDirective,
+    RainbowDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
