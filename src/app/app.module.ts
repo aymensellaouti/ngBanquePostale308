@@ -18,6 +18,8 @@ import { ItemComponent } from './cv/item/item.component';
 import { CardComponent } from './cv/card/card.component';
 import { NgstyleComponent } from './directive/ngstyle/ngstyle.component';
 import { MiniWordComponent } from './directive/mini-word/mini-word.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { MiniWordComponent } from './directive/mini-word/mini-word.component';
     CardComponent,
     NgstyleComponent,
     MiniWordComponent,
+    NgClassComponent,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
