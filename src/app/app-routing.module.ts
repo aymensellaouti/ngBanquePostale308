@@ -8,6 +8,7 @@ import { MiniWordComponent } from "./directive/mini-word/mini-word.component";
 import { SecondComponent } from "./component/second/second.component";
 import { NF404Component } from "./component/nf404/nf404.component";
 import { DetailCvComponent } from "./cv/detail-cv/detail-cv.component";
+import { LoginComponent } from "./auth/login/login.component";
 
 /* /cv */
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "cv/:id", component: DetailCvComponent },
   { path: "todo", component: TodoComponent },
   { path: "word", component: MiniWordComponent },
+  { path: "login", component: LoginComponent },
   { path: "test/:quelqueChose/:id", component: SecondComponent },
   { path: "**", component: NF404Component },
 ];
