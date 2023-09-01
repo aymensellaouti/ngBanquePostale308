@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -29,12 +30,13 @@ import { BtcToUsdPipe } from "./pipe/btc-to-usd.pipe";
 import { DefaultImagePipe } from "./cv/pipe/default-image.pipe";
 import { TodoComponent } from "./todo/todo/todo.component";
 import { EmbaucheComponent } from "./cv/embauche/embauche.component";
-import { NavbarComponent } from './component/navbar/navbar.component';
-import { NF404Component } from './component/nf404/nf404.component';
-import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
-import { TestFormComponent } from './component/test-form/test-form.component';
-import { LoginComponent } from './auth/login/login.component';
-import { TestObservableComponent } from './component/test-observable/test-observable.component';
+import { NavbarComponent } from "./component/navbar/navbar.component";
+import { NF404Component } from "./component/nf404/nf404.component";
+import { DetailCvComponent } from "./cv/detail-cv/detail-cv.component";
+import { TestFormComponent } from "./component/test-form/test-form.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { TestObservableComponent } from "./component/test-observable/test-observable.component";
+import { TestHttpComponent } from './component/test-http/test-http.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,7 @@ import { TestObservableComponent } from './component/test-observable/test-observ
     TestFormComponent,
     LoginComponent,
     TestObservableComponent,
+    TestHttpComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,7 @@ import { TestObservableComponent } from './component/test-observable/test-observ
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

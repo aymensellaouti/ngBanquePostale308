@@ -16,10 +16,11 @@ export class DetailCvComponent {
     private cvService: CvService,
     private router: Router
   ) {
-    this.cv = this.cvService.getCvById(+this.acr.snapshot.params["id"]);
-    if (!this.cv) {
-      this.router.navigate([MES_ROUTES.cv]);
-    }
+    this.cvService.getCvById(+this.acr.snapshot.params["id"]).subscribe({
+      next: (cv) => (this.cv = cv),
+      error: (e) => this.router.navigate([MES_ROUTES.cv]),
+    });
+
     /* this.acr.params.subscribe((params) => {
       this.cv = this.cvService.getCvById(+params["id"]);
     }); */

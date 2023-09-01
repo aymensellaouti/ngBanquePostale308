@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Subject, distinctUntilChanged, Observable } from "rxjs";
 import { Cv } from "../model/cv.model";
+import { API } from "../../config/api.config";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root",
@@ -29,13 +31,20 @@ export class CvService {
   ];
   private selectCvSuject = new Subject<Cv>();
   selectCv$ = this.selectCvSuject.asObservable();
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getCvs(): Cv[] {
+  getFakeCvs(): Cv[] {
     return this.cvs;
   }
 
-  getCvById(id: number): Cv | null {
+  getCvs(): Observable<Cv[]> {
+    return this.http.get<Cv[]>(API.cv);
+  }
+
+  getCvById(id: number): Observable<Cv | null> {
+    return this.http.get<Cv | null>(API.cv + id);
+  }
+  getFakeCvById(id: number): Cv | null {
     return this.cvs.find((cv) => cv.id === id) ?? null;
   }
 
