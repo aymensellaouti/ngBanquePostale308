@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "", component: FirstComponent },
   { path: "color", component: ColorComponent },
   { path: "cv", component: CvComponent },
-  { path: "cv/add", component: AddCvComponent },
+  { path: "cv/add", component: AddCvComponent, canActivate: [] },
   { path: "cv/:id", component: DetailCvComponent },
   { path: "todo", component: TodoComponent },
   { path: "word", component: MiniWordComponent },
