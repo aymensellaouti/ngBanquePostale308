@@ -11,10 +11,17 @@
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
       placeholder="Enter email"
+      #emailInput="ngModel"
     />
     <small id="emailHelp" class="form-text text-muted"
       >We'll never share your email with anyone else.</small
     >
+    <div
+      *ngIf="emailInput.invalid && emailInput.dirty"
+      class="alert alert-danger"
+    >
+      Veuillez renseignez un email valide
+    </div>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
@@ -27,7 +34,14 @@
       class="form-control"
       id="exampleInputPassword1"
       placeholder="Password"
+      #pwdlInput="ngModel"
     />
+    <div
+      *ngIf="pwdlInput.invalid && pwdlInput.dirty"
+      class="alert alert-danger"
+    >
+      La taille du mot de passe doit être de 4 caractères minimum
+    </div>
   </div>
   <button
     type="submit"
