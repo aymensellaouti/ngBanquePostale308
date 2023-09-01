@@ -27,6 +27,8 @@ export class CvService {
       4
     ),
   ];
+  private selectCvSuject = new Subject<Cv>();
+  selectCv$ = this.selectCvSuject.asObservable();
   constructor() {}
 
   getCvs(): Cv[] {
@@ -44,5 +46,9 @@ export class CvService {
       return true;
     }
     return false;
+  }
+
+  selectCv(cv: Cv) {
+    this.selectCvSuject.next(cv);
   }
 }

@@ -1,13 +1,15 @@
 <div class="row">
   <div class="alert alert-warning">
     {{ date | date : "fullDate" }}
+
     <!--     <p>{{ 1 | btcToUsd | currency : "USD" }}</p>
     <p>{{ 1 | btcToUsd : false }}</p> -->
   </div>
+  <div class="alert alert-secondary">Nombre de Cv sélectionné: {{ nbr }}</div>
   <div class="col">
-    <app-list (forwardCv)="getSelectedCv($event)" [cvs]="cvs"></app-list>
+    <app-list [cvs]="cvs"></app-list>
   </div>
-  <div class="col"><app-card [cv]="selectedCv"></app-card></div>
+  <div class="col"><app-card></app-card></div>
 </div>
 <div class="row">
   <app-embauche></app-embauche>
