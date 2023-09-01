@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { Cv } from "../model/cv.model";
 import { CvService } from "../services/cv.service";
 import { MES_ROUTES } from "../../config/routes.config";
+import { AuthService } from "../../auth/service/auth.service";
 
 @Component({
   selector: "app-detail-cv",
@@ -14,7 +15,8 @@ export class DetailCvComponent {
   constructor(
     private acr: ActivatedRoute,
     private cvService: CvService,
-    private router: Router
+    private router: Router,
+    public authService: AuthService
   ) {
     this.cvService.getCvById(+this.acr.snapshot.params["id"]).subscribe({
       next: (cv) => (this.cv = cv),

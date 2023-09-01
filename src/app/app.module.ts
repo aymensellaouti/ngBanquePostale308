@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -36,8 +36,10 @@ import { DetailCvComponent } from "./cv/detail-cv/detail-cv.component";
 import { TestFormComponent } from "./component/test-form/test-form.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { TestObservableComponent } from "./component/test-observable/test-observable.component";
-import { TestHttpComponent } from './component/test-http/test-http.component';
-import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { TestHttpComponent } from "./component/test-http/test-http.component";
+import { AddCvComponent } from "./cv/add-cv/add-cv.component";
+import { AuthInterceptor } from "./auth/interceptor/auth.interceptor";
+import { LoggerService } from "./services/logger.service";
 
 @NgModule({
   declarations: [
@@ -80,7 +82,13 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     ToastrModule.forRoot(), // ToastrModule added
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

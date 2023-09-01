@@ -49,11 +49,11 @@ export class CvService {
       "access_token",
       localStorage.getItem("token") ?? ""
     ); */
-    const headers = new HttpHeaders().set(
-      "authorization",
-      localStorage.getItem("token") ?? ""
-    );
-    return this.http.delete<any>(API.cv + id, { headers });
+
+    return this.http.delete<any>(API.cv + id);
+  }
+  addCv(cv: Cv): Observable<Cv> {
+    return this.http.post<Cv>(API.cv, cv);
   }
   getFakeCvById(id: number): Cv | null {
     return this.cvs.find((cv) => cv.id === id) ?? null;
