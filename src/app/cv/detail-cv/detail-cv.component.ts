@@ -27,7 +27,15 @@ export class DetailCvComponent {
   }
 
   deleteCv() {
-    if (this.cv) this.cvService.deleteCv(this.cv);
-    this.router.navigate([MES_ROUTES.cv]);
+    if (this.cv)
+      this.cvService.deleteCv(this.cv.id).subscribe({
+        next: (response) => {
+          console.log(response);
+          this.router.navigate([MES_ROUTES.cv]);
+        },
+        error: (e) => {
+          console.error("Error", e);
+        },
+      });
   }
 }
